@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Status;
 use Illuminate\Support\Str;
 
-class statusController extends Controller
+class StatusController extends Controller
 {
     public function store(Request $request): void {
         $status = Status::first();
