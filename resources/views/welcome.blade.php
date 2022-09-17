@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="{{ asset('images/favicons/favicon.ico') }}">
 
         <!-- Styles -->
         <style>
@@ -15,12 +16,53 @@
         </style>
 
         <style>
+            html {
+                min-height: 100% !important;
+                height: 100%;
+            }
             body {
+                min-height: 100% !important;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
                 font-family: 'Nunito', sans-serif;
+                background-image: linear-gradient(to bottom, rgba(194, 113, 255, 0.52), rgba(117, 19, 93, 0.73)),url({{asset('images/hok.jpeg')}});
+                background-attachment: fixed;
+
+
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .center {
+                width: 100%;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                text-align: center;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            @font-face {
+                font-family: 'Portico-Regular';
+                src: url('/public/fonts/portico-cufonfonts-webfont/Portico-Regular.woff') format('woff');
+            }
+            p {
+                font-family: "Portico-Regular", serif;
+                font-size: 100px;
+                color: white;
             }
         </style>
     </head>
     <body>
-        <h1>Het hok is {{ $hokStatus }}!</h1>
+        <div class="container">
+            <div class="center">
+                <p>Het hok is {{ $hokStatus ? 'Geopend!' : 'Gesloten :(' }}</p>
+            </div>
+        </div>
     </body>
 </html>
