@@ -49,7 +49,7 @@
             }
             @font-face {
                 font-family: 'Portico-Regular';
-                src: url('/public/fonts/portico-cufonfonts-webfont/Portico-Regular.woff') format('woff');
+                src: url({{asset('fonts/portico-cufonfonts-webfont/Portico-Regular.woff')}}) format('woff');
             }
             p {
                 font-family: "Portico-Regular", serif;
