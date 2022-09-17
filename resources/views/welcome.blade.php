@@ -50,11 +50,11 @@
                 transform: translate(-50%, -50%);
             }
             @font-face {
-                font-family: 'Portico-Regular';
-                src: url({{asset('fonts/portico-cufonfonts-webfont/Portico-Regular.woff')}}) format('woff');
+                font-family: 'Portico-Rounded';
+                src: url({{asset('fonts/portico-cufonfonts-webfont/Portico-Rounded.woff')}}) format('woff');
             }
             h1 {
-                font-family: "Portico-Regular", serif;
+                font-family: "Portico-Rounded", serif;
                 font-size: 100px;
                 color: white;
             }
